@@ -73,7 +73,7 @@ tsc --init
 
 Output:  
 
-```json
+```yaml
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
@@ -191,3 +191,18 @@ Der TypeScript-Compiler wird mit diesem Befehl nach der tsconfig.json-Datei scha
 ```sh
 tsc
 ```
+
+## Debugging  
+
+Für ausführliche Erklärung siehe Referenz 2.  
+TLDR: Damit Breakpoints direkt in typescript gesetzt werden können muss die Compiler-Option für ein Mapping zwischen js und ts auf true gesetzt werden (oder einkommentiert werden): 
+
+```yaml
+{
+  ...
+  "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+  ...
+}
+```
+
+Beim Kompilieren wird somit zusätzlich eine Datei *main.js.map* erstellt.
