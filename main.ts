@@ -6,4 +6,8 @@ function printFirstNames(friends: Friend[]) {
     console.log(friend.firstName);
   }
 }
-printFirstNames(7);
+printFirstNames([
+  { firstName: "Thomas" },
+  { firstName: "Julia" },
+  { firstName: "Anna" }
+]);
